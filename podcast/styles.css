@@ -1,0 +1,90 @@
+/* Основные стили */
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+nav a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+/* Эпизоды */
+.episodes .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.episode {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.media-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.static-image, .dynamic-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dynamic-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.episode:hover .dynamic-content {
+    opacity: 1;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+}
+
+/* Тест */
+.quiz {
+    padding: 2rem;
+    background: #f0f0f0;
+}
+
+/* Контакты */
+.contacts {
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    color: #333;
+}
