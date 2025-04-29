@@ -1,0 +1,604 @@
+@font-face {
+    font-family: 'RookiePunk'; /* Любое имя для шрифта */
+    src: url('fonts/RookiePunk.woff') format('woff');
+}  
+
+@font-face {
+    font-family: 'LosAngelesDeco';
+    src: url('fonts/LosAngelesDeco.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RazlukaSP';
+    src: url('fonts/RazlukaSPBold.woff') format('woff');
+}
+
+/* Основные стили */
+body {
+    position: relative;
+    font-family: 'LosAngelesDeco', serif;
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1d;
+    color: #e9e9eb;
+    text-align: center;
+		line-height: 0.85;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.global-gradient {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(
+			ellipse 50% 30% at 50% 50%, 
+			#f92b4b,
+			#1a1a1d
+	);
+	background-size: 200% 200%;
+	background-position: 50% -10%; /* Начальное положение центра */
+	z-index: -1;
+	opacity: 1;
+	transition: background-position 0.02s, opacity 0.25s;
+}
+
+
+
+title {
+    font-family: 'RazlukaSP';
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'RookiePunk';
+    font-size: 56px;
+    letter-spacing: 4px;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+h3 {
+	font-family: 'RookiePunk';
+	font-size: 36px;
+	letter-spacing: 4px;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+		font-size: 58px;
+    padding: 1rem;
+    background: #1a1a1d;
+    color: #e9e9eb;
+    min-height: 40px;
+    background: linear-gradient(to right, #5f062a, #f92b4b);
+		position: relative;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Расстояние между логотипом и текстом */
+}
+
+.nav-logo {
+  width: 62px; /* Фиксированный размер логотипа */
+  height: 62px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-family: 'RazlukaSP', sans-serif;
+  font-size: 52px;
+  margin: 0;
+}
+
+.logo {
+    font-family: 'RazlukaSP';
+    font-size: 48px;
+    margin-left: 20px;
+
+}
+
+nav a {
+    color: #e9e9eb;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+/* Описание */
+.project-description {
+  padding: 4rem 2rem;
+	max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.floated-image {
+  flex: 0 0 350px;
+	max-width: 300px;
+	max-height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.text-content {
+  flex: 1;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.text-content p {
+	font-size: 48px;
+	line-height: 0.85;
+  margin: 0 0 1rem;
+}
+
+
+/* Для секций (эпизоды, тест, контакты) */
+.episodes,
+.quiz,
+.contacts {
+		position: relative; /* Ключевой момент! */
+    margin-bottom: 2rem; /* Отступы между секциями [[3]] */
+    overflow: hidden;    /* Фикс схлопывания [[1]][[2]] */
+}
+
+.spacer {
+  height: 100px; /* Высота пустого пространства [[6]] */
+  width: 100%;
+  background: transparent; /* Фон остаётся прозрачным */
+}
+
+.spacer1 {
+  height: 200px; /* Высота пустого пространства [[6]] */
+  width: 100%;
+  background: transparent; /* Фон остаётся прозрачным */
+}
+
+.spacer_logo {
+  height: 100px; /* Высота пустого пространства [[6]] */
+  width: 100%;
+  background: transparent; /* Фон остаётся прозрачным */
+}
+
+/* Эпизоды */
+.episodes .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.episode {
+  display: flex;
+  gap: 1rem;
+	padding: 2.5rem 2.5rem 0.5rem;
+  border-radius: 10px;
+  align-items: flex-start;
+	border: 2px solid #e9e9eb;
+	border-radius: 15px;
+	background: rgba(255, 255, 255, 0.05);
+	transition: transform 0.3s, box-shadow 0.3s;
+	overflow: visible !important;
+	z-index: 1; /* Добавьте это */
+	margin-bottom: 12rem;
+}
+
+.after-episodes {
+margin: 0 auto;
+margin-top: -14rem;
+font-size: 48px;
+line-height: 0.85;
+}
+
+.media-container {
+  flex: 0 0 300px;
+  height: 300px;
+  position: relative;
+	margin-right: 1.5rem;
+	z-index: 1; /* Добавьте это */
+}
+
+.text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  text-align: left;
+}
+
+.text-content h3 {
+  margin: 1;
+	font-size: 42px;
+	line-height: 1.1;
+	margin-bottom: 0.5rem; /* Подтянуть описание ближе */
+}
+
+.text-content .description {
+  flex: 1;
+  font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.text-content .meta {
+	font-family: 'RookiePunk';
+  font-size: 3rem;
+  color: #e9e9eb;
+	margin-bottom: -1rem;
+}
+
+.buttons {
+  display: flex;
+	margin-top: -1rem;
+	margin-left: -1.8rem;
+}
+
+@media (max-width: 768px) {
+  .episodes .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .episode {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .media-container {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.static-image, .dynamic-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+		border-radius: 10px; /* Скругление для медиа-контента */
+}
+
+.dynamic-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.episode:hover .dynamic-content {
+    opacity: 1;
+}
+
+.episode:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 0px 15px #e9e9eb;
+	z-index: 1999; /* Поднимает текущий эпизод над соседями */
+}
+
+.buttons a {
+    font-family: 'RookiePunk';
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    color: #e9e9eb;
+    text-decoration: none;
+}
+
+.buttons a i {
+  font-size: 2.25rem; /* Размер иконок */
+  margin-right: 0px; /* Отступ между иконкой и текстом */
+	gap: 0px;
+
+}
+
+/* Тест */
+.quiz {
+    padding: 0rem;
+}
+
+.quiz-box {
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 15px;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: left;
+	position: relative;
+}
+
+.quiz-question {
+	font-family: 'RookiePunk';
+	font-size: 2.5rem;
+	margin-bottom: 1.5rem;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+.quiz-description {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.quiz-options label {
+	display: block;
+	padding: 1rem;
+	background: #1a1a1d;
+	border-radius: 8px;
+	margin: 0.5rem 0;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.quiz-button {
+	font-family: 'RookiePunk';
+	font-size: 24px;
+	letter-spacing: 2px;
+	padding: 0.8rem 2rem;
+	background: #1a1a1d;
+	border: 2px solid #e9e9eb;
+	color: white;
+	border-radius: 8px;
+	cursor: pointer;
+	margin-top: 1rem;
+	transition: 0.3s;
+}
+
+.quiz-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+	background: linear-gradient(to right, #5f062a, #f92b4b);
+}
+
+.fade-out {
+	animation: fadeOut 0.5s forwards;
+}
+
+.fade-in {
+	animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeOut {
+	from { opacity: 1; transform: translateY(0); }
+	to { opacity: 0; transform: translateY(20px); }
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(-20px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+/* Контакты */
+.contacts {
+    padding: 2rem;
+    text-align: center;
+		padding-bottom: 2.5rem; /* Создает пространство под контентом */
+}
+
+.social-icons a {
+    font-size: 3rem;
+    margin: 0 2rem;
+    color: #e9e9eb;
+}
+
+.social-icons a img {
+	width: 72px;  /* Желаемая ширина */
+	height: 72px; /* Желаемая высота */
+	object-fit: contain; /* Сохраняет пропорции */
+}
+
+.social-text {
+	font-family: 'LosAngelesDeco', serif;
+	margin-top: -2rem;
+	font-size: 48px;
+	letter-spacing: 2px;
+	line-height: 0.85;
+}
+
+/* Стили для кнопки с выпадающим списком */
+.play-wrapper {
+	position: relative;
+	display: inline-block;  
+	z-index: 2000; /* Добавьте это */
+}
+
+.platforms {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #1a1a1d;
+	border: 1px solid #e9e9eb;
+	border-radius: 8px;
+	padding: 8px;
+	min-width: 150px;
+	margin-top: 5px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+	z-index: 2001; /* Добавьте это */
+}
+
+.platform-link {
+	display: block;
+	padding: 8px;
+	color: #e9e9eb;
+	text-decoration: none;
+	font-size: 1.5rem;
+	transition: background 0.3s;
+}
+
+.platform-link:hover {
+	background: #5f062a;
+	border-radius: 4px;
+}
+
+.play-button {
+	position: relative;
+	z-index: 2;
+}
+
+/* Стили для анимированного заголовка */
+.hero {
+	height: 700px; /* Высота секции */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.logo-container {
+	text-align: center;
+}
+
+.animated-logo {
+	width: 500px;
+	height: 500px;
+	object-fit: contain;
+	margin-bottom: 1rem;
+	margin-top: 3rem;
+	opacity: 0;
+	transform: translateY(-50px);
+	animation: logoAppear 1.5s forwards;
+}
+
+.animated-title {
+	font-family: 'RazlukaSP', sans-serif;
+	font-size: 112px;
+	color: #e9e9eb;
+	animation: titleAppear 1.5s forwards;
+	animation-delay: 1.5s; /* Добавлено */
+	opacity: 0;
+	transform: translateY(50px);
+}
+
+/* Анимация логотипа */
+@keyframes logoAppear {
+	0% {
+			opacity: 0;
+			transform: translateY(-50px) scale(0.8);
+	}
+	100% {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+	}
+}
+
+/* Анимация заголовка */
+@keyframes titleAppear {
+	0% {
+			opacity: 0;
+			transform: translateY(50px);
+	}
+	100% {
+			opacity: 1;
+			transform: translateY(0);
+	}
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+	.animated-title {
+			font-size: 60px;
+	}
+	
+	.animated-logo {
+			width: 100px;
+			height: 100px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.animated-title {
+			font-size: 80px;
+	}
+
+	.animated-logo {
+		width: 100px;
+		height: 100px;
+}
+}
+
+.line_quiz {
+	width: 1000px;
+  height: 2px;
+	margin: 0 auto;
+  background-color: #e9e9eb;
+}
+
+.line_contacts {
+	width: 350px;
+  height: 2px;
+	margin: 0 auto;
+  background-color: #e9e9eb;
+	margin-bottom: 0.5rem;
+}
+
+.line_episode {
+	width: 200px;
+  height: 2px;
+	margin: 0 auto;
+  background-color: #e9e9eb;
+	margin-bottom: 0.5rem;
+}
+
+/* ресурсы */
+.resources {
+	padding: 2rem;
+	text-align: center;
+	padding-bottom: 2.5rem; /* Создает пространство под контентом */
+}
+
+.social-icons b {
+	font-size: 8rem;
+	margin: 0 auto;
+	color: #e9e9eb;
+}
+
+.social-icons b img {
+	width: 200px;  /* Желаемая ширина */
+	height: 200px; /* Желаемая высота */
+	object-fit: contain; /* Сохраняет пропорции */
+	margin-top: 4rem;
+	padding-right: 4rem;
+	padding-left: 4rem;
+	margin-bottom: 8rem;
+}
+
+.line_resources {
+	width: 1200px;
+  height: 2px;
+	margin: 0 auto;
+  background-color: #e9e9eb;
+}
+
+.line_about {
+	width: 1200px;
+  height: 2px;
+	margin: 6rem auto;
+	margin-bottom: 0rem;
+  background-color: #e9e9eb;
+}
