@@ -435,7 +435,7 @@ line-height: 0.85;
 	border: 1px solid #e9e9eb;
 	border-radius: 8px;
 	padding: 8px;
-	min-width: 160px;
+	min-width: 170px;
 	margin-top: 5px;
 	box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 	z-index: 2001; /* Добавьте это */
